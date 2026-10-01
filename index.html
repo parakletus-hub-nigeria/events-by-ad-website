@@ -303,6 +303,9 @@
       .footer-links { display: flex; flex-wrap: wrap; gap: 18px; font-size: 9px; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; }
       .footer-links a:hover { color: #e8db97; }
       .mobile-register { display: none; }
+      .whatsapp-button { position: fixed; bottom: 22px; left: 22px; z-index: 50; display: inline-flex; align-items: center; gap: 9px; min-height: 48px; padding: 0 17px; border: 1px solid rgba(255,255,255,.42); border-radius: 999px; background: #25d366; color: #173c25; box-shadow: 0 13px 28px rgba(20, 76, 38, .27); font-size: 10px; font-weight: 700; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; transition: transform .22s ease, box-shadow .22s ease; }
+      .whatsapp-button:hover { box-shadow: 0 17px 33px rgba(20, 76, 38, .34); transform: translateY(-3px); }
+      .whatsapp-button svg { width: 18px; height: 18px; }
       .toast { position: fixed; right: 20px; bottom: 20px; z-index: 60; max-width: 330px; padding: 15px 17px; border-radius: var(--radius-sm); background: var(--olive-deep); color: var(--cream); box-shadow: var(--shadow); font-size: 12px; opacity: 0; transform: translateY(15px); transition: opacity .2s ease, transform .2s ease; pointer-events: none; }
       .toast.show { opacity: 1; transform: translateY(0); }
       .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s ease; }
@@ -386,6 +389,7 @@
         .price-card .button { bottom: 30px; left: 30px; }
         .accordion-button { font-size: 22px; }
         .mobile-register { position: fixed; right: 0; bottom: 0; left: 0; z-index: 40; display: flex; align-items: center; justify-content: center; min-height: 65px; background: var(--brown); color: var(--cream); font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+        .whatsapp-button { bottom: 77px; left: 15px; min-height: 44px; padding: 0 14px; font-size: 9px; }
         .footer-main { align-items: flex-start; flex-direction: column; }
       }
       @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; } .ticker-track { animation: none; } .ticker-group:last-child { display: none; } }
@@ -466,8 +470,8 @@
 
       <section class="final-cta grain" id="register" aria-labelledby="final-heading"><div class="wrap reveal"><span class="eyebrow">The business behind your talent matters</span><h2 id="final-heading">Give your event business a blueprint that works.</h2><p>Come ready to learn, ask better questions, and create the structure your next level needs.</p><a class="button button--light registration-link" href="#tickets">Secure your seat</a></div></section>
     </main>
-    <footer class="footer"><div class="wrap footer-main"><a class="brand" href="#top" aria-label="Back to top"><picture class="brand-logo"><source srcset="assets/events-by-ad-logo.svg" type="image/svg+xml" /><img src="assets/events-by-ad-logo.png" alt="" /></picture></a><div class="footer-links"><a href="#register">Registration link</a><a href="#register">WhatsApp</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a></div></div><p class="footer-credit">This website is designed with excellence by <a href="https://www.parakletushub.com" target="_blank" rel="noopener noreferrer">Parakletus Technologies</a></p></footer>
-    <a class="mobile-register registration-link" href="#tickets">Secure your seat · ₦45,000 early bird</a><div class="toast" role="status" aria-live="polite"></div>
+    <footer class="footer"><div class="wrap footer-main"><a class="brand" href="#top" aria-label="Back to top"><picture class="brand-logo"><source srcset="assets/events-by-ad-logo.svg" type="image/svg+xml" /><img src="assets/events-by-ad-logo.png" alt="" /></picture></a><div class="footer-links"><a href="#register">Registration link</a><a href="https://wa.me/message/OKQKUXBC4QTCC1" target="_blank" rel="noopener noreferrer">WhatsApp</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a></div></div><p class="footer-credit">This website is designed with excellence by <a href="https://www.parakletushub.com" target="_blank" rel="noopener noreferrer">Parakletus Technologies</a></p></footer>
+    <a class="whatsapp-button" href="https://wa.me/message/OKQKUXBC4QTCC1" target="_blank" rel="noopener noreferrer" aria-label="Chat with Events by AD on WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.78 7.05L4 20l1.45-4.1A8 8 0 1 1 20 11.5Z"/><path d="M9 8.5c.33 2.33 1.67 3.67 4 4" stroke-linecap="round"/></svg>Chat on WhatsApp</a><a class="mobile-register registration-link" href="#tickets">Secure your seat · ₦45,000 early bird</a><div class="toast" role="status" aria-live="polite"></div>
 
     <script>
       const menuButton = document.querySelector('.menu-button');
