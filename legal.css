@@ -25,10 +25,9 @@ a:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; border-ra
 .site-header { background: var(--olive-deep); color: var(--cream); }
 .nav, .container { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
 .nav { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-.brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 700; letter-spacing: .035em; }
-.brand-mark { width: 37px; height: 37px; display: grid; place-items: center; border: 1px solid rgba(254,255,237,.65); border-radius: 50%; font: 600 23px/1 var(--display); }
-.brand-copy { font-size: 11px; line-height: 1.06; text-transform: uppercase; }
-.brand-copy small { display: block; margin-top: 3px; font-size: 7px; font-weight: 500; letter-spacing: .12em; color: #e8db97; }
+.brand { display: inline-flex; align-items: center; text-decoration: none; }
+.brand-logo { display: block; width: 151px; height: 52px; overflow: hidden; filter: brightness(0) invert(1); opacity: .92; }
+.brand-logo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 52%; }
 .nav-link { font-size: 10px; font-weight: 700; letter-spacing: .12em; text-decoration: none; text-transform: uppercase; }
 .nav-link:hover { color: #e8db97; }
 
@@ -66,4 +65,4 @@ mark { padding: 2px 5px; border-radius: 4px; background: #f3df8b; color: inherit
 .footer-links a:hover { color: var(--white); }
 @keyframes drift { to { transform: translate(-16px, 24px) rotate(28deg); } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; } }
-@media (max-width: 600px) { .nav, .container { width: min(100% - 32px, 1120px); } .hero { padding: 62px 0 55px; } main { padding: 42px 0 58px; } .section { padding: 24px 21px; } }
+@media (max-width: 600px) { .nav, .container { width: min(100% - 32px, 1120px); } .brand-logo { width: 128px; height: 45px; } .hero { padding: 62px 0 55px; } main { padding: 42px 0 58px; } .section { padding: 24px 21px; } }
