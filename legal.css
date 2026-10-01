@@ -55,10 +55,10 @@ mark { padding: 2px 5px; border-radius: 4px; background: #f3df8b; color: inherit
 .contact-card h2 { color: var(--cream); }
 .contact-card p { color: rgba(254,255,237,.84); }
 .contact-card mark { color: var(--ink); }
-.footer { padding: 30px 0; background: var(--brown); color: var(--cream); }
+.footer { padding: 30px 0 18px; background: var(--brown); color: var(--cream); }
 .footer-inner { width: min(1120px, calc(100% - 40px)); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
 .footer small { font-size: 10px; letter-spacing: .07em; text-transform: uppercase; }
-.footer-credit { margin: 0; color: rgba(254,255,237,.76); font-size: 11px; text-align: center; }
+.footer-credit { width: min(1120px, calc(100% - 40px)); margin: 21px auto 0; padding-top: 15px; border-top: 1px solid rgba(254,255,237,.16); color: rgba(254,255,237,.76); font-size: 11px; text-align: center; }
 .footer-credit a { color: #e8db97; font-weight: 700; text-decoration: none; }
 .footer-credit a:hover { color: var(--white); text-decoration: underline; }
 .footer-links { display: flex; flex-wrap: wrap; gap: 18px; }

@@ -295,12 +295,12 @@
       .final-cta .eyebrow { justify-content: center; color: #e7d77c; }
       .final-cta h2 { max-width: 780px; margin: 20px auto; color: var(--cream); font-size: clamp(47px, 6.4vw, 80px); }
       .final-cta p { max-width: 520px; margin: 0 auto 28px; color: rgba(254,255,237,.79); }
-      .footer { padding: 36px 0; background: var(--olive-deep); color: rgba(254,255,237,.72); }
-      .footer .wrap { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+      .footer { padding: 36px 0 20px; background: var(--olive-deep); color: rgba(254,255,237,.72); }
+      .footer-main { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
       .footer .brand { color: var(--cream); }
       .footer .brand-mark { border-color: #d9c563; }
       .footer .brand-mark::after { border-color: #d9c563; }
-      .footer-credit { margin: 0; color: rgba(254,255,237,.72); font-size: 10px; line-height: 1.5; letter-spacing: .025em; text-align: center; }
+      .footer-credit { width: min(1120px, calc(100% - 48px)); margin: 25px auto 0; padding-top: 17px; border-top: 1px solid rgba(254,255,237,.16); color: rgba(254,255,237,.72); font-size: 10px; line-height: 1.5; letter-spacing: .025em; text-align: center; }
       .footer-credit a { color: #e8db97; font-weight: 700; text-decoration: none; }
       .footer-credit a:hover { color: var(--white); text-decoration: underline; }
       .footer-links { display: flex; flex-wrap: wrap; gap: 18px; font-size: 9px; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; }
@@ -388,7 +388,7 @@
         .price-card .button { bottom: 30px; left: 30px; }
         .accordion-button { font-size: 22px; }
         .mobile-register { position: fixed; right: 0; bottom: 0; left: 0; z-index: 40; display: flex; align-items: center; justify-content: center; min-height: 65px; background: var(--brown); color: var(--cream); font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
-        .footer .wrap { align-items: flex-start; flex-direction: column; }
+        .footer-main { align-items: flex-start; flex-direction: column; }
       }
       @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; } .ticker-track { animation: none; } .ticker-group:last-child { display: none; } }
     </style>
@@ -468,7 +468,7 @@
 
       <section class="final-cta grain" id="register" aria-labelledby="final-heading"><div class="wrap reveal"><span class="eyebrow">The business behind your talent matters</span><h2 id="final-heading">Give your event business a blueprint that works.</h2><p>Come ready to learn, ask better questions, and create the structure your next level needs.</p><a class="button button--light registration-link" href="#tickets">Secure your seat</a></div></section>
     </main>
-    <footer class="footer"><div class="wrap"><a class="brand" href="#top" aria-label="Back to top"><span class="brand-mark">E</span><span class="brand-copy">Events<br />by AD<small>Where details matter</small></span></a><p class="footer-credit">This website is designed with excellence by <a href="https://www.parakletushub.com" target="_blank" rel="noopener noreferrer">Parakletus Technologies</a></p><div class="footer-links"><a href="#register">Registration link</a><a href="#register">WhatsApp</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a></div></div></footer>
+    <footer class="footer"><div class="wrap footer-main"><a class="brand" href="#top" aria-label="Back to top"><span class="brand-mark">E</span><span class="brand-copy">Events<br />by AD<small>Where details matter</small></span></a><div class="footer-links"><a href="#register">Registration link</a><a href="#register">WhatsApp</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a></div></div><p class="footer-credit">This website is designed with excellence by <a href="https://www.parakletushub.com" target="_blank" rel="noopener noreferrer">Parakletus Technologies</a></p></footer>
     <a class="mobile-register registration-link" href="#tickets">Secure your seat · ₦45,000 early bird</a><div class="toast" role="status" aria-live="polite"></div>
 
     <script>
