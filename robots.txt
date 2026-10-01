@@ -1,0 +1,3 @@
+# Events by AD public landing page
+User-agent: *
+Allow: /
