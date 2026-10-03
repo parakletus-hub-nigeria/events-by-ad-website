@@ -276,6 +276,10 @@
       .price-card--featured p { color: rgba(48,53,30,.75); }
       .price-card .button { position: absolute; bottom: 39px; left: 40px; }
       .price-card--featured .button { border-color: var(--olive-deep); background: var(--olive-deep); color: var(--cream); }
+      .checkout-flow { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin-top: 20px; overflow: hidden; border: 1px solid rgba(254,255,237,.26); border-radius: var(--radius-md); background: rgba(254,255,237,.26); }
+      .checkout-step { min-height: 100px; padding: 19px 21px; background: rgba(24,28,15,.25); }
+      .checkout-step span { display: block; margin-bottom: 8px; color: #e8db97; font-size: 9px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+      .checkout-step p { margin: 0; color: rgba(254,255,237,.78); font-size: 11px; line-height: 1.55; }
 
       .faq { padding: 126px 0; }
       .faq-grid { display: grid; grid-template-columns: minmax(0, .75fr) minmax(0, 1.25fr); gap: 90px; }
@@ -307,8 +311,6 @@
       .whatsapp-button { position: fixed; bottom: 22px; left: 22px; z-index: 50; display: inline-flex; align-items: center; gap: 9px; min-height: 48px; padding: 0 17px; border: 1px solid rgba(255,255,255,.42); border-radius: 999px; background: #25d366; color: #173c25; box-shadow: 0 13px 28px rgba(20, 76, 38, .27); font-size: 10px; font-weight: 700; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; transition: transform .22s ease, box-shadow .22s ease; }
       .whatsapp-button:hover { box-shadow: 0 17px 33px rgba(20, 76, 38, .34); transform: translateY(-3px); }
       .whatsapp-button svg { width: 18px; height: 18px; }
-      .toast { position: fixed; right: 20px; bottom: 20px; z-index: 60; max-width: 330px; padding: 15px 17px; border-radius: var(--radius-sm); background: var(--olive-deep); color: var(--cream); box-shadow: var(--shadow); font-size: 12px; opacity: 0; transform: translateY(15px); transition: opacity .2s ease, transform .2s ease; pointer-events: none; }
-      .toast.show { opacity: 1; transform: translateY(0); }
       .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s ease; }
       .reveal.is-visible { opacity: 1; transform: translateY(0); }
 
@@ -388,6 +390,8 @@
         .price-card { min-height: 320px; padding: 30px; }
         .price-card + .price-card { border-top: 1px solid rgba(254,255,237,.26); border-left: 0; }
         .price-card .button { bottom: 30px; left: 30px; }
+        .checkout-flow { grid-template-columns: 1fr; }
+        .checkout-step { min-height: auto; }
         .accordion-button { font-size: 22px; }
         .mobile-register { position: fixed; right: 0; bottom: 0; left: 0; z-index: 40; display: flex; align-items: center; justify-content: center; min-height: 65px; background: var(--brown); color: var(--cream); font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
         .whatsapp-button { bottom: 77px; left: 15px; min-height: 44px; padding: 0 14px; font-size: 9px; }
@@ -403,7 +407,7 @@
         <a class="brand" href="#top" aria-label="Events by AD, home"><picture class="brand-logo"><source srcset="assets/events-by-ad-logo.svg" type="image/svg+xml" /><img src="assets/events-by-ad-logo.png" alt="" /></picture></a>
         <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
         <nav class="nav-links" aria-label="Primary navigation">
-          <a href="#blueprint">The blueprint</a><a href="#programme">Programme</a><a href="#instructors">Instructors</a><a href="#tickets">Tickets</a><a class="button registration-link" href="#tickets">Secure your seat</a>
+          <a href="#blueprint">The blueprint</a><a href="#programme">Programme</a><a href="#instructors">Instructors</a><a href="#tickets">Tickets</a><a class="button registration-link" href="https://paystack.shop/pay/ark4ng4bbj">Secure your seat</a>
         </nav>
       </div>
     </header>
@@ -416,7 +420,7 @@
             <h1 id="hero-title"><span class="script">The</span><strong>Event</strong><strong>Business</strong><strong>Blueprint</strong></h1>
             <p class="hero-tagline">From Event Skills to a Business That Works.</p>
             <p class="hero-copy">You know how to make events happen. Now it is time to build the business behind the work—with more clarity, better systems, and a plan you can keep using.</p>
-            <div class="hero-actions"><a class="button registration-link" href="#tickets">Secure your seat</a><a class="button button--outline" href="#programme">Explore the blueprint</a></div>
+            <div class="hero-actions"><a class="button registration-link" href="https://paystack.shop/pay/ark4ng4bbj">Secure your seat</a><a class="button button--outline" href="#programme">Explore the blueprint</a></div>
             <div class="hero-meta" aria-label="Event details"><div><b>Wednesday &amp; Thursday</b><span>4th &amp; 5th November 2026</span></div><div><b>6:00 PM–9:00 PM</b><span>WAT each day</span></div><div><b>Live Online</b><span>2-day virtual training</span></div></div>
           </div>
           <div class="hero-visual reveal">
@@ -462,17 +466,17 @@
       </section>
 
       <section class="pricing grain" id="tickets" aria-labelledby="tickets-heading">
-        <div class="wrap"><div class="pricing-head reveal"><div><span class="eyebrow" style="color:#e7d77c">Your seat at the table</span><h2 id="tickets-heading">Choose the ticket that moves you forward.</h2></div><p>Two evenings to take a more intentional look at your business—and leave with more than inspiration.</p></div><div class="price-grid reveal"><article class="price-card price-card--featured"><span class="status">Early bird ticket</span><h3>Early Bird</h3><div class="price">₦45,000</div><p>Secure your place for both days of the live virtual training, plus the complete participant experience.</p><a class="button registration-link" href="#register">Choose early bird</a></article><article class="price-card"><span class="status">Regular ticket</span><h3>Regular</h3><div class="price">₦50,000</div><p>Join the two-day live virtual training and build a clearer foundation for the business behind your work.</p><a class="button button--light registration-link" href="#register">Choose regular</a></article></div></div>
+        <div class="wrap"><div class="pricing-head reveal"><div><span class="eyebrow" style="color:#e7d77c">Your seat at the table</span><h2 id="tickets-heading">Choose the ticket that moves you forward.</h2></div><p>Two evenings to take a more intentional look at your business—and leave with more than inspiration.</p></div><div class="price-grid reveal"><article class="price-card price-card--featured"><span class="status">Early bird ticket</span><h3>Early Bird</h3><div class="price">₦45,000</div><p>Secure your place for both days of the live virtual training, plus the complete participant experience.</p><a class="button registration-link" href="https://paystack.shop/pay/ark4ng4bbj">Choose early bird</a></article><article class="price-card"><span class="status">Regular ticket</span><h3>Regular</h3><div class="price">₦50,000</div><p>Join the two-day live virtual training and build a clearer foundation for the business behind your work.</p><a class="button button--light registration-link" href="https://paystack.shop/pay/ark4ng4bbj">Choose regular</a></article></div><div class="checkout-flow reveal" aria-label="Registration steps"><article class="checkout-step"><span>01 · Pay securely</span><p>Choose your ticket and complete payment through Paystack.</p></article><article class="checkout-step"><span>02 · Register on Luma</span><p>After confirmed payment, continue to the official Luma registration form.</p></article><article class="checkout-step"><span>03 · Join the community</span><p>Look out for our welcome message with your private WhatsApp community invitation.</p></article></div></div>
       </section>
 
       <section class="faq" aria-labelledby="faq-heading">
         <div class="wrap faq-grid"><div class="faq-intro reveal"><span class="eyebrow">A few helpful details</span><h2 id="faq-heading">Before you join us.</h2><p>Clear answers for event professionals considering this live online business training.</p></div><div class="accordion reveal"><article class="accordion-item"><button class="accordion-button" type="button" aria-expanded="true" aria-controls="faq-1">When is The Event Business Blueprint?<span class="accordion-icon">+</span></button><div class="accordion-panel" id="faq-1">The Event Business Blueprint takes place live online on Wednesday, 4th November and Thursday, 5th November 2026, from 6:00 PM to 9:00 PM WAT each day.</div></article><article class="accordion-item"><button class="accordion-button" type="button" aria-expanded="false" aria-controls="faq-2">Who is this training for?<span class="accordion-icon">+</span></button><div class="accordion-panel" id="faq-2" hidden>The training is for event planners, decorators, bakers, caterers, photographers, videographers, makeup artists, MCs, DJs, rental vendors, florists, stylists, and other event professionals—whether you are already serving clients or ready to take your skills more seriously as a business.</div></article><article class="accordion-item"><button class="accordion-button" type="button" aria-expanded="false" aria-controls="faq-3">Is the training virtual?<span class="accordion-icon">+</span></button><div class="accordion-panel" id="faq-3" hidden>Yes. The Event Business Blueprint is a live online, two-day virtual training running from 6:00 PM to 9:00 PM WAT each day.</div></article><article class="accordion-item"><button class="accordion-button" type="button" aria-expanded="false" aria-controls="faq-4">What does the training cover?<span class="accordion-icon">+</span></button><div class="accordion-panel" id="faq-4" hidden>The training covers positioning, ideal clients, pricing, costs, profit, systems, client experience, vendor collaboration, event-day pressure, business growth, and planning your 2027 business goals.</div></article><article class="accordion-item"><button class="accordion-button" type="button" aria-expanded="false" aria-controls="faq-5">How much is the event business training?<span class="accordion-icon">+</span></button><div class="accordion-panel" id="faq-5" hidden>Early Bird tickets are ₦45,000 and Regular tickets are ₦50,000.</div></article><article class="accordion-item"><button class="accordion-button" type="button" aria-expanded="false" aria-controls="faq-6">Will I get replay access and a certificate?<span class="accordion-icon">+</span></button><div class="accordion-panel" id="faq-6" hidden>Yes. Participants receive replay access and a certificate of participation, alongside a workbook, practical templates and tools, and entry to the private WhatsApp community.</div></article></div></div>
       </section>
 
-      <section class="final-cta grain" id="register" aria-labelledby="final-heading"><div class="wrap reveal"><span class="eyebrow">The business behind your talent matters</span><h2 id="final-heading">Give your event business a blueprint that works.</h2><p>Come ready to learn, ask better questions, and create the structure your next level needs.</p><a class="button button--light registration-link" href="#tickets">Secure your seat</a></div></section>
+      <section class="final-cta grain" id="register" aria-labelledby="final-heading"><div class="wrap reveal"><span class="eyebrow">The business behind your talent matters</span><h2 id="final-heading">Give your event business a blueprint that works.</h2><p>Come ready to learn, ask better questions, and create the structure your next level needs.</p><a class="button button--light registration-link" href="https://paystack.shop/pay/ark4ng4bbj">Secure your seat</a></div></section>
     </main>
-    <footer class="footer"><div class="wrap footer-main"><a class="brand" href="#top" aria-label="Back to top"><picture class="brand-logo"><source srcset="assets/events-by-ad-logo.svg" type="image/svg+xml" /><img src="assets/events-by-ad-logo.png" alt="" /></picture></a><div class="footer-links"><a href="#register">Registration link</a><a href="https://wa.me/message/OKQKUXBC4QTCC1" target="_blank" rel="noopener noreferrer">WhatsApp</a><a class="footer-email" href="mailto:info.eventsbyad@gmail.com">info.eventsbyad@gmail.com</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a></div></div><p class="footer-credit">This website is designed with excellence by <a href="https://www.parakletushub.com" target="_blank" rel="noopener noreferrer">Parakletus Technologies</a></p></footer>
-    <a class="whatsapp-button" href="https://wa.me/message/OKQKUXBC4QTCC1" target="_blank" rel="noopener noreferrer" aria-label="Chat with Events by AD on WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.78 7.05L4 20l1.45-4.1A8 8 0 1 1 20 11.5Z"/><path d="M9 8.5c.33 2.33 1.67 3.67 4 4" stroke-linecap="round"/></svg>Chat on WhatsApp</a><a class="mobile-register registration-link" href="#tickets">Secure your seat · ₦45,000 early bird</a><div class="toast" role="status" aria-live="polite"></div>
+    <footer class="footer"><div class="wrap footer-main"><a class="brand" href="#top" aria-label="Back to top"><picture class="brand-logo"><source srcset="assets/events-by-ad-logo.svg" type="image/svg+xml" /><img src="assets/events-by-ad-logo.png" alt="" /></picture></a><div class="footer-links"><a class="registration-link" href="https://paystack.shop/pay/ark4ng4bbj">Registration link</a><a href="https://wa.me/message/OKQKUXBC4QTCC1" target="_blank" rel="noopener noreferrer">WhatsApp</a><a class="footer-email" href="mailto:info.eventsbyad@gmail.com">info.eventsbyad@gmail.com</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a></div></div><p class="footer-credit">This website is designed with excellence by <a href="https://www.parakletushub.com" target="_blank" rel="noopener noreferrer">Parakletus Technologies</a></p></footer>
+    <a class="whatsapp-button" href="https://wa.me/message/OKQKUXBC4QTCC1" target="_blank" rel="noopener noreferrer" aria-label="Chat with Events by AD on WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.78 7.05L4 20l1.45-4.1A8 8 0 1 1 20 11.5Z"/><path d="M9 8.5c.33 2.33 1.67 3.67 4 4" stroke-linecap="round"/></svg>Chat on WhatsApp</a><a class="mobile-register registration-link" href="https://paystack.shop/pay/ark4ng4bbj">Secure your seat · ₦45,000 early bird</a>
 
     <script>
       const menuButton = document.querySelector('.menu-button');
@@ -512,15 +516,6 @@
         button.setAttribute('aria-expanded', String(!expanded)); panel.hidden = expanded;
       }));
 
-      const toast = document.querySelector('.toast');
-      document.querySelectorAll('.registration-link').forEach(link => link.addEventListener('click', event => {
-        if (link.getAttribute('href') === '#register') {
-          event.preventDefault();
-          toast.textContent = 'Registration link placeholder: connect your payment or registration page here.';
-          toast.classList.add('show');
-          window.setTimeout(() => toast.classList.remove('show'), 4200);
-        }
-      }));
 
       const observer = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); } }), { threshold: .1 });
       document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
